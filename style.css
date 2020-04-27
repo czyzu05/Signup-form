@@ -113,7 +113,7 @@ button {
     animation: animateH3 1s ease forwards;
 }
 
-@keyframes h3Animate {
+@keyframes animateH3 {
     from {
         opacity: 0;
         top: 170px;
