@@ -1,0 +1,179 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body{
+    background-color: #f5f7fa;
+}
+
+.container{
+    background-color: #f5f7fa;
+    box-shadow: .2rem .4rem 4rem rgba(0,0,0,.15);
+    width: 500px;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+    margin-top: 100px;
+    padding: 30px;
+    border-radius: 20px;
+    height: 450px;
+    overflow: hidden;
+}
+
+h2, .confirmation {
+    color: #656d78;
+    background-color: white;
+    display: inline-block;
+    padding: 15px 30px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: .2rem .2rem 1rem rgba(0,0,0,.1);
+    position: absolute;
+}
+
+.header {
+    font-size: 1.4rem;
+    font-weight: 800;
+}
+
+.msg {
+    margin-top: 10px;
+}
+
+h3{
+    position: absolute;
+    top: 150px;
+    right: 30px;
+    color: #656d78;
+    background-color: white;
+    display: inline-block;
+    padding: 15px 30px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: .2rem .2rem 1rem rgba(0,0,0,.1);
+}
+
+.line {
+    width: 100%;
+    height: 2px;
+    background-color: #ccd1d9;
+    position: absolute;
+    left: 0;
+    bottom: 170px;
+}
+
+input {
+    width: 100%;
+    padding: 20px 0;
+    font-size: 1.2rem;
+    border: none;
+    color: #656d78;
+    margin-top: 150px;
+    background-color: #f5f7fa;
+    position: absolute;
+    bottom: 90px;
+    left: 0;
+    padding-left: 30px;
+}
+
+input:focus, button:focus {
+    outline: none;
+}
+
+button {
+    font-size: 1.3rem;
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: 2px solid #ccc;
+    background-color: #f5f7fa;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+    color: #656d78;
+    cursor: pointer;
+    bottom: 30px;
+}
+
+.email h2,
+.password h2,
+.name h3,
+.email h3,
+.password h3 {
+    opacity: 0;
+}
+
+.h3Animate {
+    animation: animateH3 1s ease forwards;
+}
+
+@keyframes h3Animate {
+    from {
+        opacity: 0;
+        top: 170px;
+    }
+    to {
+        opacity: 1;
+        top: 150px;
+    }
+}
+
+.hideH2Text {
+    animation: clearH2Text 1s ease forwards;
+}
+
+@keyframes clearH2Text {
+    from {
+        top: 30px;
+    }
+    to {
+        top: -100px;
+    }
+}
+
+.hideH3Text {
+    animation: clearH3Text 2s ease forwards;
+}
+
+@keyframes clearH3Text {
+    from {
+        opacity: 1;
+        top: 150px;
+    }
+    to {
+        opacity: 1;
+        top: -200px;
+    }
+}
+
+.showH2Text {
+    animation: slideInH2Text 1s ease .8s forwards;
+}
+
+@keyframes slideInH2Text {
+    from {
+        top: -20px;
+        visibility: hidden;
+        opacity: 0;
+    }
+    to {
+        top: 30px;
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.email input, 
+.password input,
+.confirmation {
+    visibility: hidden;
+    opacity: 0;
+}
+
+
